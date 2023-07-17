@@ -10,5 +10,10 @@ int main(int argc, char** argv)
         std::cout << " argv[" << i << "] : " << argv[i] << std::endl;
     if (argc > 1)
         Sleep(atoi(argv[1]));
-    std::cout << "Hello World! \n";
+    std::cout << "Hola Mundo \n";
+
+    SYSTEM_INFO sisinfo;
+    GetSystemInfo(&sisinfo);
+    std::cout << sisinfo.wProcessorArchitecture << "\n";
+
 }
